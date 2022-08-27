@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MyTimesheet</string>
+    <string name="tv_title">"Gestor de horas TIMESHEET"</string>
+    <string name="email_name">"Email"</string>
+    <string name="txt_password">"Password"</string>
+    <string name="bt_ingresar">"Ingresar"</string>
+    <string name="tv_sign">"Sign in"</string>
+    <string name="txt_recupera">"¿Olvidó sus credenciales?"</string>
+
+
+    <string name="user_name">"Bienvenido Usuario"</string>
+    <string name="ibt_salir">"Salir"</string>
+    <string name="bt_registro">"Registro de horas"</string>
+    <string name="bt_reporte">"Consultar registro de horas"</string>
+
+    <string name="ibt_calendar">"Calendario"</string>
+    <string name="tv_fecha">"Seleccionar Fecha"</string>
+
+    <string name="bt_guardar">"Guardar"</string>
+    <string name="tv_controlh">"Registro de horas"</string>
+    <string name="tv_proyecto">"Proyecto"</string>
+    <string name="tv_horas">"Horas"</string>
+    <string name="tv_addproy">"ListaProyecto"</string>
+
+    <string name="tv_credenciales">"Coloca tus datos para recuperar tus credenciales"</string>
+    <string name="et_usuario">"Usuario"</string>
+    <string name="et_correo">"Ingresa el correo"</string>
+    <string name="bt_enviar">"Recuperar"</string>
+
+    <string name="tv_consulta">"Consulta registro de horas"</string>
+    <string name="etd_fecini">"Fecha inicio"</string>
+    <string name="etd_fecfin">"Fecha fin"</string>
+    <string name="bt_genreporte">"Generar Reporte"</string>
+
+</resources>
