@@ -56,13 +56,13 @@
             android:layout_marginBottom="63dp"
             android:text="@string/user_name"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/ibt_salir"
+            app:layout_constraintEnd_toStartOf="@+id/ibt_menu3"
             app:layout_constraintHorizontal_bias="0.159"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/ibt_salir"
+            android:id="@+id/ibt_menu3"
             android:layout_width="49dp"
             android:layout_height="55dp"
             android:layout_marginStart="138dp"

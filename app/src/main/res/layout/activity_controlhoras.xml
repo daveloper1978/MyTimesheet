@@ -11,7 +11,6 @@
         android:layout_width="403dp"
         android:layout_height="116dp"
         android:layout_marginBottom="128dp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_registrohoras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,13 +25,13 @@
             android:layout_marginBottom="63dp"
             android:text="@string/user_name"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/ibt_salir"
+            app:layout_constraintEnd_toStartOf="@+id/ibt_menu3"
             app:layout_constraintHorizontal_bias="0.159"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/ibt_salir"
+            android:id="@+id/ibt_menu3"
             android:layout_width="49dp"
             android:layout_height="55dp"
             android:layout_marginStart="138dp"
@@ -58,7 +57,8 @@
         app:layout_constraintStart_toEndOf="@+id/tv_fecha"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/calendar" />
+        app:srcCompat="@drawable/calendar"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/tv_fecha"
@@ -124,7 +124,6 @@
         android:layout_height="29dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="185dp"
-        android:lineSpacingExtra="8sp"
         android:text="@string/tv_horas"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/bt_guardar"
@@ -138,7 +137,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_addproy"
         app:layout_constraintTop_toBottomOf="@+id/tv_horas" />
@@ -152,6 +154,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="135dp"
         android:text="@string/tv_addproy"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bt_guardar"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
         app:layout_constraintStart_toStartOf="parent"
