@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_correo"
+        android:id="@+id/et_clave"
         android:layout_width="190dp"
         android:layout_height="45dp"
         android:layout_marginStart="100dp"
@@ -48,8 +48,8 @@
         android:layout_marginBottom="5dp"
         android:ems="10"
         android:hint="@string/et_usuario"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/et_correo"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/et_clave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_credenciales" />

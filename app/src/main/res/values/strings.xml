@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MyTimesheet</string>
     <string name="tv_title">"Gestor de horas TIMESHEET"</string>
-    <string name="email_name">"Email"</string>
-    <string name="txt_password">"Password"</string>
+    <string name="dni_data">"Ingrese DNI"</string>
+    <string name="txt_password">"Ingrese Clave"</string>
     <string name="bt_ingresar">"Ingresar"</string>
     <string name="tv_sign">"Sign in"</string>
     <string name="txt_recupera">"¿Olvidó sus credenciales?"</string>
@@ -27,9 +27,21 @@
     <string name="et_correo">"Ingresa el correo"</string>
     <string name="bt_enviar">"Recuperar"</string>
 
+    <string name="tv_altausuario">"Colocar el DNI para registrar al nuevo usuario"</string>
+
+
     <string name="tv_consulta">"Consulta registro de horas"</string>
     <string name="etd_fecini">"Fecha inicio"</string>
     <string name="etd_fecfin">"Fecha fin"</string>
     <string name="bt_genreporte">"Generar Reporte"</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 
 </resources>

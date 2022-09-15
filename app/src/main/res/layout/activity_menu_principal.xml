@@ -10,15 +10,15 @@
         android:id="@+id/bt_reportehoras"
         android:layout_width="283dp"
         android:layout_height="64dp"
-        android:layout_marginStart="63dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="2dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="272dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="150dp"
         android:onClick="consultar_reporte"
         android:text="@string/bt_reporte"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_registrohoras" />
 
@@ -28,13 +28,46 @@
         android:layout_height="64dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:onClick="registrarhoras"
         android:text="@string/bt_registro"
         app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <Button
+        android:id="@+id/bt_altausuario"
+        android:layout_width="283dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="altausuarios"
+        android:text="Alta de Usuarios"
+        app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <Button
+        android:id="@+id/bt_cambioclave"
+        android:layout_width="283dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="cambiarClave"
+        android:text="Cambio de clave"
+        app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.413" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"

@@ -20,35 +20,40 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RecuperarCredenciales extends AppCompatActivity {
+public class CambiarClave extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recuperar_credenciales);
+        setContentView(R.layout.activity_cambiar_clave);
     }
 
-    public void enviar(View v){
+    public void grabarClave(View v){
 
-        recuperarClave();
+        //Función para consumir API
+        apiCambioClave();
         startActivity(new Intent(this, MainActivity.class));
 
     }
 
-    private void recuperarClave(){
+    private void apiCambioClave(){
 
+        //Capturar los valores que se ingresarán en el API
         final EditText txtNombre = findViewById(R.id.et_usuario);
+        final EditText txtClave = findViewById(R.id.et_clave);
 
         //URL Servicio JSON
         String url = "https://serviciosts.azurewebsites.net/api/Users/GetRegUsers";
 
+        //Declarar para pasar el valor en número
         Integer DNI = Integer.parseInt(txtNombre.getText().toString());
 
+        //Declaración de la estructura JSON
         JSONObject jsonobject = new JSONObject();
         try {
             jsonobject.put("nu_dni", DNI);
-            jsonobject.put("co_clave", "1234");
-            jsonobject.put("co_estado", 2);
+            jsonobject.put("co_clave", txtClave.getText().toString());
+            jsonobject.put("co_estado", 1);
             jsonobject.put("s_Type", "Update");
             Log.i("======>", jsonobject.toString());
         } catch (JSONException e) {
@@ -56,17 +61,19 @@ public class RecuperarCredenciales extends AppCompatActivity {
             Log.i("======>", e.getMessage());
 
         }
+
+        //Ejecución del SERVICIO WEB
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
                 url,
                 jsonobject,
                 new Response.Listener<JSONObject>() {
-                @Override
-                public void onResponse(JSONObject response) { //Success Callback
-                    Toast toast = Toast.makeText(RecuperarCredenciales.this,"Se envió correctamente", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);
-                    toast.show();
-                }
-        }, new Response.ErrorListener() {
+                    @Override
+                    public void onResponse(JSONObject response) { //Success Callback
+                        Toast toast = Toast.makeText(CambiarClave.this,"Se envió correctamente", Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    }
+                }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.i("======>", error.getMessage());
@@ -77,4 +84,6 @@ public class RecuperarCredenciales extends AppCompatActivity {
         requestQueue.add(jsonObjReq);
 
     }
+
+
 }
