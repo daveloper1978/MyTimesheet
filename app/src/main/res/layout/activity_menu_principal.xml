@@ -11,9 +11,9 @@
         android:layout_width="283dp"
         android:layout_height="64dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="8dp"
         android:onClick="consultar_reporte"
         android:text="@string/bt_reporte"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,12 +28,11 @@
         android:layout_height="64dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="8dp"
         android:onClick="registrarhoras"
         android:text="@string/bt_registro"
         app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
@@ -67,13 +66,45 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.298" />
+
+    <Button
+        android:id="@+id/bt_registraActividad"
+        android:layout_width="283dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="registraActividad"
+        android:text="Registrar Actividad"
+        app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <Button
+        android:id="@+id/registraCliente"
+        android:layout_width="283dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="registraCliente"
+        android:text="Registrar Cliente"
+        app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.681" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="403dp"
-        android:layout_height="116dp"
-        android:layout_marginBottom="128dp"
+        android:layout_width="404dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="300dp"
         app:layout_constraintBottom_toTopOf="@+id/bt_registrohoras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -28,6 +28,7 @@
     <string name="bt_enviar">"Recuperar"</string>
 
     <string name="tv_altausuario">"Colocar el DNI para registrar al nuevo usuario"</string>
+    <string name="tv_registraActividad">"Registra"</string>
 
 
     <string name="tv_consulta">"Consulta registro de horas"</string>

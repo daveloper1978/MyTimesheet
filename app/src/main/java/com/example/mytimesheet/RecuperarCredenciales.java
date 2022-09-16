@@ -62,6 +62,14 @@ public class RecuperarCredenciales extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) { //Success Callback
+
+                    try {
+                        final String datos = response.getString("issuccess");
+                        Log.i("======>", datos);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
                     Toast toast = Toast.makeText(RecuperarCredenciales.this,"Se envió correctamente", Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();

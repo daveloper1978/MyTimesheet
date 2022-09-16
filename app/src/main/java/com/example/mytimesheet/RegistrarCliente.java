@@ -1,7 +1,5 @@
 package com.example.mytimesheet;
 
-import static android.view.Gravity.CENTER;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,39 +19,45 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class AltaUsuarios extends AppCompatActivity {
+public class RegistrarCliente extends AppCompatActivity {
+
+    private static final int CENTER = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alta_usuarios);
+        setContentView(R.layout.activity_registrar_cliente);
     }
 
-    public void altaUsuario(View v){
+    public void registraCliente(View v){
 
-        //Función para consumir API
-        apiAltaUsuario();
+        // registraActividad();
+        apiRegistraCliente();
         startActivity(new Intent(this, MenuPrincipal.class));
 
     }
-
-    private void apiAltaUsuario(){
+    private void apiRegistraCliente(){
 
         //Capturar los valores que se ingresarán en el API
-        final EditText txtNombre = findViewById(R.id.et_usuario);
+        final EditText txtRuc = findViewById(R.id.et_ruc);
+        final EditText txtNombEmpresa = findViewById(R.id.et_nombreCliente);
+        final EditText txtActividad = findViewById(R.id.et_actividadCliente);
+        final EditText txtEstado = findViewById(R.id.et_estadoCli);
 
         //URL Servicio JSON
-        String url = "https://serviciosts.azurewebsites.net/api/Users/GetRegUsers";
+        String url = "https://serviciosts.azurewebsites.net/api/Client/GetRegClient";
 
         //Declarar para pasar el valor en número
-        Integer DNI = Integer.parseInt(txtNombre.getText().toString());
+        Integer CodActividad = Integer.parseInt(txtActividad.getText().toString());
+        Integer CodEstado = Integer.parseInt(txtEstado.getText().toString());
 
         //Declaración de la estructura JSON
         JSONObject jsonobject = new JSONObject();
         try {
-            jsonobject.put("nu_dni", DNI);
-            jsonobject.put("co_clave", "1234");
-            jsonobject.put("co_estado", 2);
+            jsonobject.put("co_RUC",txtRuc.getText().toString());
+            jsonobject.put("no_Nombre", txtNombEmpresa.getText().toString());
+            jsonobject.put("no_Actividad",CodActividad);
+            jsonobject.put("no_Estado",CodEstado);
             jsonobject.put("s_Type", "Insert");
             Log.i("======>", jsonobject.toString());
         } catch (JSONException e) {
@@ -77,7 +81,7 @@ public class AltaUsuarios extends AppCompatActivity {
                             e.printStackTrace();
                         }
 
-                        Toast toast = Toast.makeText(AltaUsuarios.this,"Se envió correctamente", Toast.LENGTH_LONG);
+                        Toast toast = Toast.makeText(RegistrarCliente.this,"Se guardó correctamente", Toast.LENGTH_LONG);
                         toast.setGravity(CENTER, 0, 0);
                         toast.show();
                     }

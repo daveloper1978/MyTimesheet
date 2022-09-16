@@ -15,11 +15,9 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -27,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button ingresar;
     EditText name, password;
-    final String[] sDNI = new String[1];
-    final String[] sEstado = new String[1];
+    String Est2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,16 +51,17 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
 
-            Toast.makeText(MainActivity.this, "getResources().getString(R.string.welcome)", Toast.LENGTH_LONG).show();
+            final String sValor = validarLogin();
+            Toast.makeText(MainActivity.this, getResources().getString(R.string.welcome), Toast.LENGTH_LONG).show();
 
             Intent intent = new Intent(getApplicationContext(), MenuPrincipal.class);
-            intent.putExtra("DATA_NAME_KEY", name.getText().toString());
+            Log.i("======>",name.getText().toString());
+            intent.putExtra("DNI", name.getText().toString());
+            intent.putExtra("ESTADO", Est2);
 
-            //validarLogin();
             startActivity(intent);
 
         }
-
 
     }
 
@@ -73,14 +71,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void validarLogin(){
+    public String validarLogin(){
+
+        final String[] Est1 = new String[1];
 
         //URL Servicio JSON
         String url = "https://serviciosts.azurewebsites.net/api/Credential/GetCredentialResponse";
 
         Integer DNI = Integer.parseInt(name.getText().toString());
 
-        JSONObject jsonobject = new JSONObject();
+        final JSONObject jsonobject = new JSONObject();
         try {
             jsonobject.put("nu_dni", DNI);
             jsonobject.put("co_clave", password.getText().toString());
@@ -90,23 +90,31 @@ public class MainActivity extends AppCompatActivity {
             Log.i("======>", e.getMessage());
 
         }
-        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+
+        final JsonObjectRequest jsonObjReq = new
+                JsonObjectRequest(Request.Method.POST,
                 url,
                 jsonobject,
                 new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) { //Success Callback
+                    /*
+                    try {
+                        final String datos = response.getString("data");
+                        Log.i("======>", datos);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }*/
 
                     try {
-                        JSONArray jsonarray = response.getJSONArray("Data");
-                        int size = jsonarray.length();
-                        for (int i=0; i<size; i++){
+                        JSONObject data = response.getJSONObject("data");
+                        final String sdni = data.getString("nu_DNI");
+                        final String sestado = data.getString("co_estado");
+                        Est2 = data.getString("co_estado");
+                        Log.i("======2>", sdni);
+                        Log.i("======>", sestado);
+                        Log.i("======3>", Est2);
 
-                            JSONObject jsonObject = new JSONObject(jsonarray.get(i).toString());
-                            sDNI[i] = jsonObject.getString("nu_DNI");
-                            sEstado[i] = jsonObject.getString("co_estado");
-
-                        }
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -126,49 +134,8 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(jsonObjReq);
 
-    }
-
-    private void onResponse() {
-
-        //URL Servicio JSON
-        String url = "https://serviciosts.azurewebsites.net/api/Credential/GetCredentialResponse";
-
-        Integer DNI = Integer.parseInt(name.getText().toString());
-
-        JSONObject jsonobject = new JSONObject();
-        try {
-            jsonobject.put("nu_dni", DNI);
-            jsonobject.put("co_clave", password.getText().toString());
-            Log.i("======>", jsonobject.toString());
-        } catch (JSONException e) {
-            Log.i("======>", e.getMessage());
-        }
-
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.POST, url, null, new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-
-                int size = response.length();
-                for (int i = 0; i < size; i++) {
-
-                    try {
-                        JSONObject jsonObject = new JSONObject(response.get(i).toString());
-                        sDNI[i] = jsonObject.getString("nu_DNI");
-                        sEstado[i] = jsonObject.getString("co_estado");
-
-                    } catch (JSONException ex) {
-                        ex.printStackTrace();
-                    }
-
-                }
-            }
-            }, new Response.ErrorListener(){
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.i("======>", error.getMessage());
-                }
-            });
-
+        return Est2;
 
     }
+
 }

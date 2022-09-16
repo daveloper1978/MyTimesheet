@@ -2,6 +2,7 @@ package com.example.mytimesheet;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -16,9 +17,13 @@ public class MenuPrincipal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
 
-        textViewName = (TextView) findViewById(R.id.tv_name);
+        String nameParam = getIntent().getStringExtra("DNI");
+        String nameParam2 = getIntent().getStringExtra("ESTADO");
+        Log.i("======4>", nameParam + nameParam2 );
+        /*textViewName = (TextView) findViewById(R.id.tv_name);
 
-        /*String nameParam = savedInstanceState.getString("DATA_NAME_KEY");
+        String nameParam = savedInstanceState.getString("DATA_NAME_KEY");
+        Log.i("======>", nameParam);
         textViewName.setText(nameParam);*/
 
     }
@@ -47,6 +52,17 @@ public class MenuPrincipal extends AppCompatActivity {
     public void altausuarios(View v){
 
         startActivity(new Intent(this,AltaUsuarios.class));
+
+    }
+
+    public void registraActividad(View v){
+
+        startActivity(new Intent(this, RegistrarActividades.class));
+
+    }
+    public void registraCliente(View v){
+
+        startActivity(new Intent(this, RegistrarCliente.class));
 
     }
 }
