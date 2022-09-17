@@ -20,11 +20,17 @@ public class MenuPrincipal extends AppCompatActivity {
         String nameParam = getIntent().getStringExtra("DNI");
         String nameParam2 = getIntent().getStringExtra("ESTADO");
         Log.i("======4>", nameParam + nameParam2 );
-        /*textViewName = (TextView) findViewById(R.id.tv_name);
+        textViewName = findViewById(R.id.tv_name);
+        textViewName.setText(nameParam);
 
-        String nameParam = savedInstanceState.getString("DATA_NAME_KEY");
-        Log.i("======>", nameParam);
-        textViewName.setText(nameParam);*/
+        if (nameParam2.equals("2")) {
+
+            Intent intent = new Intent(getApplicationContext(), CambiarClave.class);
+
+            intent.putExtra("DNI", nameParam);
+            startActivity(intent);
+
+        }
 
     }
 
@@ -60,6 +66,7 @@ public class MenuPrincipal extends AppCompatActivity {
         startActivity(new Intent(this, RegistrarActividades.class));
 
     }
+
     public void registraCliente(View v){
 
         startActivity(new Intent(this, RegistrarCliente.class));

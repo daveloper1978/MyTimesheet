@@ -74,7 +74,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="175dp"
-        android:onClick="grabarClave"
+        android:enabled="false"
         android:text="@string/bt_guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
