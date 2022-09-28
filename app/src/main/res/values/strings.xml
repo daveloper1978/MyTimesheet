@@ -6,6 +6,7 @@
     <string name="bt_ingresar">"Ingresar"</string>
     <string name="tv_sign">"Sign in"</string>
     <string name="txt_recupera">"¿Olvidó sus credenciales?"</string>
+    <string name="btn_agregar">"Agregar registro"</string>
 
 
     <string name="user_name">"Bienvenido Usuario"</string>

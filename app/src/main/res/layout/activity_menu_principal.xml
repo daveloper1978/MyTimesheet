@@ -6,122 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MenuPrincipal">
 
-    <Button
-        android:id="@+id/bt_reportehoras"
-        android:layout_width="283dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="consultar_reporte"
-        android:text="@string/bt_reporte"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_registrohoras" />
-
-    <Button
-        android:id="@+id/bt_registrohoras"
-        android:layout_width="283dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
-        android:onClick="registrarhoras"
-        android:text="@string/bt_registro"
-        app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-    <Button
-        android:id="@+id/bt_altausuario"
-        android:layout_width="283dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="altausuarios"
-        android:text="Alta de Usuarios"
-        app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.086" />
-
-    <Button
-        android:id="@+id/bt_cambioclave"
-        android:layout_width="283dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="cambiarClave"
-        android:text="Cambio de clave"
-        app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.298" />
-
-    <Button
-        android:id="@+id/bt_registraActividad"
-        android:layout_width="283dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="registraActividad"
-        android:text="Registrar Actividad"
-        app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.498" />
-
-    <Button
-        android:id="@+id/registraCliente"
-        android:layout_width="283dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="registraCliente"
-        android:text="Registrar Cliente"
-        app:layout_constraintBottom_toTopOf="@+id/bt_reportehoras"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.681" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="404dp"
         android:layout_height="96dp"
-        android:layout_marginBottom="300dp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_registrohoras"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/tv_name"
-            android:layout_width="177dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="63dp"
+            android:layout_width="306dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="24dp"
             android:text="@string/user_name"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ibt_menu3"
-            app:layout_constraintHorizontal_bias="0.159"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -129,13 +32,25 @@
             android:id="@+id/ibt_menu3"
             android:layout_width="49dp"
             android:layout_height="55dp"
-            android:layout_marginStart="138dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="20dp"
             android:contentDescription="@string/ibt_salir"
             android:onClick="Salir"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_name"
-            app:srcCompat="@drawable/salir"
-            tools:layout_editor_absoluteY="9dp" />
+            app:srcCompat="@drawable/salir" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_menu"
+        android:layout_width="390dp"
+        android:layout_height="590dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
