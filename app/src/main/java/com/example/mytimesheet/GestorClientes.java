@@ -39,7 +39,7 @@ public class GestorClientes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestor_clientes);
 
-        recyclerView = findViewById(R.id.lv_clientes);
+        recyclerView = findViewById(R.id.lv_trabajadores);
         mAdapter = new ClientesAdapter(clientesList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);

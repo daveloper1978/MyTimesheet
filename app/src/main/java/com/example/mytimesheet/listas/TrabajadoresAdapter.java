@@ -22,39 +22,39 @@ public class TrabajadoresAdapter extends
 
         public MyViewHolder(View view) {
             super(view);
-           nombreTrabajador = (TextView) view.findViewById(R.id.ruc);
-           apellidoTrabajador = (TextView) view.findViewById(R.id.nombreEmpresa);
-           sueldoTrabajador = (TextView) view.findViewById(R.id.nombreEmpresa);
+            nombreTrabajador = (TextView) view.findViewById(R.id.nombreTrabajador);
+            apellidoTrabajador = (TextView) view.findViewById(R.id.apellidoTrabajador);
+            sueldoTrabajador = (TextView) view.findViewById(R.id.sueldoTrabajador);
         }
     }
 
-    public TrabajadoresAdapter(List<Clientes> ClientesList){
+    public TrabajadoresAdapter(List<Trabajadores> TrabajadoresList){
 
-        this.TrabajadoresList = ClientesList;
+        this.TrabajadoresList = TrabajadoresList;
 
     }
 
-
     @Override
-    public ClientesAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public TrabajadoresAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.clientes_fila, parent, false);
+                .inflate(R.layout.trabajadores_fila, parent, false);
 
-        return new ClientesAdapter.MyViewHolder(itemView);
+        return new TrabajadoresAdapter.MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(ClientesAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(TrabajadoresAdapter.MyViewHolder holder, int position) {
 
-        Clientes clientes = ClientesList.get(position);
-        holder.ruc.setText(clientes.getRUC());
-        holder.nombreEmpresa.setText(clientes.getNombreEmpresa());
+        Trabajadores trabajadores = TrabajadoresList.get(position);
+        holder.nombreTrabajador.setText(trabajadores.getNombreTrabajador());
+        holder.apellidoTrabajador.setText(trabajadores.getApellidoTrabajador());
+        holder.sueldoTrabajador.setText(String.valueOf(trabajadores.getSueldoTrabajador()));
 
     }
 
     @Override
     public int getItemCount() {
-        return ClientesList.size();
+        return TrabajadoresList.size();
     }
 
 }

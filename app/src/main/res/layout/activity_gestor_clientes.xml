@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lv_clientes"
+        android:id="@+id/lv_trabajadores"
         android:layout_width="409dp"
         android:layout_height="566dp"
         android:layout_marginTop="9dp"

@@ -19,13 +19,13 @@
             android:id="@+id/apellidoTrabajador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/purple_700"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:textColor="@color/purple_700" />
+
     <TextView
         android:id="@+id/sueldoTrabajador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/purple_200" />
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd" />
 
 </LinearLayout>
