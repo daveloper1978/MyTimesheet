@@ -21,8 +21,6 @@ import org.json.JSONObject;
 
 public class RegistrarActividades extends AppCompatActivity {
 
-    private static final int CENTER = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +31,7 @@ public class RegistrarActividades extends AppCompatActivity {
 
         // registraActividad();
         apiRegistraActividad();
-        startActivity(new Intent(this, MenuPrincipal.class));
+        startActivity(new Intent(this, GestorActividades.class));
 
     }
     private void apiRegistraActividad(){
@@ -78,7 +76,7 @@ public class RegistrarActividades extends AppCompatActivity {
                         }
 
                         Toast toast = Toast.makeText(RegistrarActividades.this,"Se envió correctamente", Toast.LENGTH_LONG);
-                        toast.setGravity(CENTER, 0, 0);
+
                         toast.show();
                     }
                 }, new Response.ErrorListener() {

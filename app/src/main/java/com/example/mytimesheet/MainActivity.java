@@ -134,20 +134,23 @@ public class MainActivity extends AppCompatActivity {
 
                                 JSONObject data = response.getJSONObject("data");
                                 final String sdni = data.getString("nu_DNI");
+                                final String susuario = data.getString("no_usuario");
                                 final String sestado = data.getString("co_estado");
 
-                                Log.i("======2>", sdni);
+                                Log.i("======1>", sdni);
+                                Log.i("======2>", susuario);
                                 Log.i("======3>", sestado);
 
                                 Intent intent = new Intent(getApplicationContext(), MenuPrincipal.class);
 
                                 intent.putExtra("DNI", sdni);
+                                intent.putExtra("USUARIO", susuario);
                                 intent.putExtra("ESTADO", sestado);
 
                                 if (response.getString("issuccess") == "true") {
                                     startActivity(intent);
 
-                                    Toast toast = Toast.makeText(MainActivity.this,"Se logeó correctamente", Toast.LENGTH_LONG);
+                                    Toast toast = Toast.makeText(MainActivity.this,"¡Bienvenido!. Login correcto", Toast.LENGTH_LONG);
                                     toast.show();
                                 }
 
@@ -160,6 +163,8 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             Log.i("======6>", error.getMessage());
+                            Toast toast = Toast.makeText(MainActivity.this,"Error en la validación de credenciales", Toast.LENGTH_LONG);
+                            toast.show();
                         }
                     } );
 

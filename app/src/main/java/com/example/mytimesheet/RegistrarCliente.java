@@ -10,18 +10,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class RegistrarCliente extends AppCompatActivity {
-
-    private static final int CENTER = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +29,7 @@ public class RegistrarCliente extends AppCompatActivity {
 
         // registraActividad();
         apiRegistraCliente();
-        startActivity(new Intent(this, MenuPrincipal.class));
+        startActivity(new Intent(this, GestorClientes.class));
 
     }
     private void apiRegistraCliente(){
@@ -82,18 +78,18 @@ public class RegistrarCliente extends AppCompatActivity {
                         }
 
                         Toast toast = Toast.makeText(RegistrarCliente.this,"Se guardó correctamente", Toast.LENGTH_LONG);
-                        toast.setGravity(CENTER, 0, 0);
                         toast.show();
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+
                 Log.i("======>", error.getMessage());
             }
         } );
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonObjReq);
+
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjReq);
 
     }
 }
