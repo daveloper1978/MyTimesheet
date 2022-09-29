@@ -20,6 +20,13 @@
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_registrar_actividades.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_registrar_cliente.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_reporte_horas.xml" value="0.264" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout-w936dp/proyectos_fila.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/actividades_fila.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_gestor_actividades.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_gestor_clientes.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_gestor_proyectos.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_gestor_trabajadores.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/clientes_fila.xml" value="0.1" />
       </map>
     </option>
   </component>
