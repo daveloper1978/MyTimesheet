@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarProyecto">
+
+
+    <EditText
+        android:id="@+id/et_Proyecto"
+        android:layout_width="281dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:hint="Cod.Centro de Costo"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombreProyecto" />
+
+    <EditText
+        android:id="@+id/et_estadoPro"
+        android:layout_width="275dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="Cod.Estado"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Proyecto" />
+
+    <EditText
+        android:id="@+id/et_codProyecto"
+        android:layout_width="286dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:hint="Ingresa Codigo"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/et_nombreProyecto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="277dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="100dp"
+        android:text="Registrar Proyecto"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_nombreProyecto"
+        android:layout_width="291dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:hint="Nombre del Proyecto"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_codProyecto" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="299dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="60dp"
+        android:onClick="registraProyecto"
+        android:text="@string/bt_guardar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_estadoPro" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="127dp"
+        android:layout_height="125dp"
+
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

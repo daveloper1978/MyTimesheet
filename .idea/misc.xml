@@ -5,7 +5,6 @@
       <map>
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.15327978580990628" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout-w936dp/activity_login.xml" value="0.17890625" />
-        <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout-w936dp/trabajadores_fila.xml" value="0.16837431693989072" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/actividad_menu.xml" value="0.35733695652173914" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/actividades_fila.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_alta_usuarios.xml" value="0.25416666666666665" />
@@ -14,17 +13,23 @@
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_consulta_horas_consultor.xml" value="0.22146739130434784" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_controlhoras.xml" value="0.22871376811594202" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_gestor_actividades.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_gestor_clientes.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_gestor_trabajadores.xml" value="0.190625" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_login.xml" value="0.21240942028985507" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_menu_principal.xml" value="0.1" />
+        <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_menu_principal.xml" value="0.264" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_recuperar_credenciales.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_registrar_actividades.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_registrar_cliente.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/activity_reporte_horas.xml" value="0.264" />
-        <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/clientes_fila.xml" value="0.2391304347826087" />
-        <entry key="..\:/Users/User/Documents/UPC Programas/Programacion_Mobile/MyTimesheet/app/src/main/res/layout/trabajadores_fila.xml" value="0.14296875" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout-w936dp/proyectos_fila.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/actividades_fila.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_gestor_actividades.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_gestor_clientes.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_gestor_proyectos.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_gestor_trabajadores.xml" value="0.1" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_registrar_actividades.xml" value="0.22" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_registrar_cliente.xml" value="0.18" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/activity_registrar_proyecto.xml" value="0.18" />
+        <entry key="..\:/Users/benn0/AndroidStudioProjects/MyTimesheet/app/src/main/res/layout/clientes_fila.xml" value="0.1" />
       </map>
     </option>
   </component>
