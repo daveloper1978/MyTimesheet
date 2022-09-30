@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".RegistrarTrabajadores"
+            android:exported="false" />
+        <activity
             android:name=".RegistrarProyecto"
             android:exported="false" />
         <activity

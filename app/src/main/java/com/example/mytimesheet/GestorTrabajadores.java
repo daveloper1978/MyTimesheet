@@ -60,7 +60,7 @@ public class GestorTrabajadores<recyclerView> extends AppCompatActivity {
         btn_AddOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), RegistrarCliente.class);
+                Intent intent = new Intent(getApplicationContext(), RegistrarTrabajadores.class);
                 startActivity(intent);
             }
 
