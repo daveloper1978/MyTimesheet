@@ -23,6 +23,9 @@
             android:name=".RegistrarProyecto"
             android:exported="false" />
         <activity
+            android:name=".ReporteHorasTotal"
+            android:exported="false" />
+        <activity
             android:name=".GestorProyectos"
             android:exported="false" />
         <activity
