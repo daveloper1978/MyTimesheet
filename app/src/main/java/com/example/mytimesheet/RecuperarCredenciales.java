@@ -11,11 +11,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,6 +24,13 @@ public class RecuperarCredenciales extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recuperar_credenciales);
+
+    }
+
+    private void volver(View v){
+
+        startActivity(new Intent(this,MenuPrincipal.class));
+
     }
 
     public void enviar(View v){
@@ -56,7 +61,8 @@ public class RecuperarCredenciales extends AppCompatActivity {
             Log.i("======>", e.getMessage());
 
         }
-        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(
+                Request.Method.POST,
                 url,
                 jsonobject,
                 new Response.Listener<JSONObject>() {
@@ -77,12 +83,13 @@ public class RecuperarCredenciales extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+
                 Log.i("======>", error.getMessage());
+
             }
         } );
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonObjReq);
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjReq);
 
     }
 }

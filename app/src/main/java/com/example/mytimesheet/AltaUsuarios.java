@@ -1,7 +1,5 @@
 package com.example.mytimesheet;
 
-import static android.view.Gravity.CENTER;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,11 +10,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -78,18 +74,19 @@ public class AltaUsuarios extends AppCompatActivity {
                         }
 
                         Toast toast = Toast.makeText(AltaUsuarios.this,"Se envió correctamente", Toast.LENGTH_LONG);
-                        toast.setGravity(CENTER, 0, 0);
+
                         toast.show();
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+
                 Log.i("======>", error.getMessage());
+
             }
         } );
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonObjReq);
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjReq);
 
     }
 }

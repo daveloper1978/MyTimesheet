@@ -23,10 +23,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class ReporteHorasTotal extends AppCompatActivity {
 
@@ -60,32 +57,20 @@ public class ReporteHorasTotal extends AppCompatActivity {
         textViewName = findViewById(R.id.tv_name);
         textViewName.setText(nameParam);
 
-        SimpleDateFormat formatter2=new SimpleDateFormat("dd-MM-yyyy");
-
-        Date Fef1 = null;
-        Date Fef2 = null;
-        try {
-            Fef1 = formatter2.parse(nameParam2);
-            Fef2 = formatter2.parse(nameParam3);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        ReporteHoras(Integer.parseInt(nameParam1),Fef1,Fef2);
-
+        ReporteHoras(Integer.parseInt(nameParam1),nameParam2,nameParam3);
 
     }
 
-    private void ReporteHoras(int DNI, Date Fec_ini, Date Fec_fin){
+    private void ReporteHoras(int DNI, String Fec_ini, String Fec_fin){
 
         String url = "https://serviciosts.azurewebsites.net/api/Hours/GetHoursResponse";
 
         final JSONObject jsonobject = new JSONObject();
         try {
-            jsonobject.put("fe_Registro_ini", "19-09-2022");
-            jsonobject.put("fe_Registro_fin", "25-09-2022");
+            jsonobject.put("fe_Registro_ini", Fec_ini);
+            jsonobject.put("fe_Registro_fin", Fec_fin);
             jsonobject.put("nu_dni", DNI);
-            
+
             Log.i("======>", jsonobject.toString());
         } catch (JSONException e) {
 
@@ -114,16 +99,7 @@ public class ReporteHorasTotal extends AppCompatActivity {
                                 final String snoproyecto = jsonObject.getString("no_Proyecto");
                                 final Double snhoras = Double.parseDouble(jsonObject.getString("nu_HorasTrabajador"));
 
-                                SimpleDateFormat formatter1=new SimpleDateFormat("dd-MM-yyyy");
-
-                                Date Fereg = null;
-                                try {
-                                    Fereg = formatter1.parse(sferegistro);
-                                } catch (ParseException e) {
-                                    e.printStackTrace();
-                                }
-
-                                reporte = new Reporte(Fereg,snoproyecto,snhoras);
+                                reporte = new Reporte(sferegistro,snoproyecto,snhoras);
                                 reporteList.add(reporte);
                             }
 

@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">MyTimesheet</string>
     <string name="tv_title">"Gestor de horas TIMESHEET"</string>
-    <string name="dni_data">"Ingrese DNI"</string>
-    <string name="txt_password">"Ingrese Clave"</string>
+    <string name="dni_data">"Ingrese su DNI"</string>
+    <string name="txt_password">"Ingrese su clave"</string>
     <string name="bt_ingresar">"Ingresar"</string>
     <string name="tv_sign">"Sign in"</string>
     <string name="txt_recupera">"¿Olvidó sus credenciales?"</string>
+
     <string name="btn_agregar">"Agregar registro"</string>
+    <string name="tv_cambiarclave">"Actualizar la clave de sus credenciales"</string>
 
 
     <string name="user_name">"Bienvenido Usuario"</string>
@@ -23,7 +25,7 @@
     <string name="tv_horas">"Horas"</string>
     <string name="tv_addproy">"ListaProyecto"</string>
 
-    <string name="tv_credenciales">"Coloca tus datos para recuperar tus credenciales"</string>
+    <string name="tv_credenciales">"Coloca los datos para recuperar tus credenciales"</string>
     <string name="et_usuario">"Usuario"</string>
     <string name="et_correo">"Ingresa el correo"</string>
     <string name="bt_enviar">"Recuperar"</string>

@@ -46,7 +46,7 @@ public class ReporteAdapter extends
         public void onBindViewHolder(ReporteAdapter.MyViewHolder holder, int position) {
 
             Reporte reporte = ReporteList.get(position);
-            holder.fechaRegistro.setText(String.valueOf(reporte.getFechaRegistro()));
+            holder.fechaRegistro.setText(reporte.getFechaRegistro());
             holder.nombreProyecto.setText(reporte.getNombreProyecto());
             holder.horas.setText(String.valueOf(reporte.getHoras()));
 

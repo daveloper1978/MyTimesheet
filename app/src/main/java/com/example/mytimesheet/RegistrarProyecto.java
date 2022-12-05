@@ -1,30 +1,37 @@
 package com.example.mytimesheet;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class RegistrarProyecto extends AppCompatActivity {
 
+    TextView textViewName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_proyecto);
+
+        String usuario = getIntent().getStringExtra("USUARIO");
+
+        textViewName = findViewById(R.id.tv_name);
+        textViewName.setText(usuario);
+
     }
 
     public void registraProyecto(View v){
@@ -68,7 +75,8 @@ public class RegistrarProyecto extends AppCompatActivity {
         }
 
         //Ejecución del SERVICIO WEB
-        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(
+                Request.Method.POST,
                 url,
                 jsonobject,
                 new Response.Listener<JSONObject>() {
@@ -93,8 +101,7 @@ public class RegistrarProyecto extends AppCompatActivity {
             }
         } );
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonObjReq);
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjReq);
 
     }
 }
